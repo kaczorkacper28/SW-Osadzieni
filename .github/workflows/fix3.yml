@@ -1,0 +1,39 @@
+name: Remove duplicate timer permission function
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch index.js
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          p = Path('index.js')
+          s = p.read_text(encoding='utf-8')
+          pattern = r'\nfunction hasTimerPermission\(interaction\) \{.*?\n\}\n\nfunction createOsadzonyId'
+          replacement = '\nfunction createOsadzonyId'
+          s, count = re.subn(pattern, replacement, s, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit('Duplicate timer permission function not found')
+          p.write_text(s, encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.js
+          git commit -m "Usuń konflikt uprawnień timera"
+          git push
+      - name: Remove workflow
+        if: success()
+        run: |
+          git rm .github/workflows/fix3.yml
+          git commit -m "Usuń tymczasowy workflow 3"
+          git push
