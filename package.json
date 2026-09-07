@@ -4,7 +4,7 @@
   "description": "Rejestr osadzonych SW",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node launcher.js"
   },
   "dependencies": {
     "discord.js": "^14.21.0",
