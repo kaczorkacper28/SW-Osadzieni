@@ -112,11 +112,6 @@ function hasPermission(interaction) {
     return hasStaffRole(interaction.member) || isAdmin(interaction);
 }
 
-function hasTimerPermission(interaction) {
-    // Celowo NIE uwzględniamy Administratora ani innych rang.
-    return hasTimerRole(interaction.member);
-}
-
 function createOsadzonyId() {
     const number = db.nextId++;
     saveDatabase();
