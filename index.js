@@ -35,7 +35,11 @@ const STAFF_ROLE_NAMES = [
 ];
 
 // TYLKO ta ranga może pauzować/wznawiać/zmieniać czas kary.
-const TIMER_ROLE_NAME = "Generał Inspektor SW ⚖️👑";
+const TIMER_FULL_ROLE_NAMES = [
+    "Generał Inspektor SW ⚖️👑",
+    "Generał SW ⚖️⭐"
+];
+const TIMER_EMPLOYEE_ROLE_NAME = "Pracownik SW";
 
 const CHANNEL_OSADZENI = "📍・osadzeni";
 const CHANNEL_PRZEPUSTKI = "🎫・przepustki";
@@ -78,9 +82,26 @@ function hasStaffRole(member) {
     return STAFF_ROLE_NAMES.some(name => member.roles.cache.some(role => role.name === name));
 }
 
-function hasTimerRole(member) {
+function hasTimerFullRole(member) {
     if (!member?.roles) return false;
-    return member.roles.cache.some(role => role.name === TIMER_ROLE_NAME);
+    return TIMER_FULL_ROLE_NAMES.some(name => member.roles.cache.some(role => role.name === name));
+}
+
+function hasTimerEmployeeRole(member) {
+    if (!member?.roles) return false;
+    return member.roles.cache.some(role => role.name === TIMER_EMPLOYEE_ROLE_NAME);
+}
+
+function hasTimerPermission(interaction, action) {
+    if (hasTimerFullRole(interaction.member)) return true;
+    return ["pause", "resume"].includes(action) && hasTimerEmployeeRole(interaction.member);
+}
+
+function timerPermissionMessage(action) {
+    if (["pause", "resume"].includes(action)) {
+        return "❌ Pauzę i kontynuowanie kary może wykonywać **Pracownik SW** oraz **Generał Inspektor SW ⚖️👑** i **Generał SW ⚖️⭐**.";
+    }
+    return "❌ Dodawanie i odejmowanie czasu może wykonywać wyłącznie **Generał Inspektor SW ⚖️👑** oraz **Generał SW ⚖️⭐**.";
 }
 
 function isAdmin(interaction) {
