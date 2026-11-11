@@ -309,12 +309,258 @@ async function refreshOsadzonyMessage(osadzony) {
     } catch (_) {}
 }
 
+// Fikcyjny taryfikator RP; minuty w podpowiedziach to sugerowany wyrok.
+const PARAGRAFY_RP = [
+    {
+        "numer": 1,
+        "opis": "Próba kradzieży",
+        "minuty": 10
+    },
+    {
+        "numer": 2,
+        "opis": "Kradzież mienia",
+        "minuty": 15
+    },
+    {
+        "numer": 3,
+        "opis": "Kradzież pojazdu",
+        "minuty": 20
+    },
+    {
+        "numer": 4,
+        "opis": "Włamanie do budynku lub pojazdu",
+        "minuty": 20
+    },
+    {
+        "numer": 5,
+        "opis": "Rozbój",
+        "minuty": 30
+    },
+    {
+        "numer": 6,
+        "opis": "Napad z użyciem broni",
+        "minuty": 45
+    },
+    {
+        "numer": 7,
+        "opis": "Oszustwo majątkowe",
+        "minuty": 15
+    },
+    {
+        "numer": 8,
+        "opis": "Wymuszenie pieniędzy lub haraczu",
+        "minuty": 25
+    },
+    {
+        "numer": 9,
+        "opis": "Umyślne zniszczenie mienia",
+        "minuty": 10
+    },
+    {
+        "numer": 10,
+        "opis": "Groźby karalne",
+        "minuty": 10
+    },
+    {
+        "numer": 11,
+        "opis": "Pobicie",
+        "minuty": 20
+    },
+    {
+        "numer": 12,
+        "opis": "Spowodowanie ciężkich obrażeń",
+        "minuty": 35
+    },
+    {
+        "numer": 13,
+        "opis": "Usiłowanie zabójstwa",
+        "minuty": 50
+    },
+    {
+        "numer": 14,
+        "opis": "Zabójstwo",
+        "minuty": 60
+    },
+    {
+        "numer": 15,
+        "opis": "Uprowadzenie lub bezprawne przetrzymywanie osoby",
+        "minuty": 40
+    },
+    {
+        "numer": 16,
+        "opis": "Wzięcie zakładnika",
+        "minuty": 45
+    },
+    {
+        "numer": 17,
+        "opis": "Nielegalne posiadanie broni",
+        "minuty": 20
+    },
+    {
+        "numer": 18,
+        "opis": "Nielegalny handel bronią",
+        "minuty": 40
+    },
+    {
+        "numer": 19,
+        "opis": "Bezprawne użycie broni, bez spowodowania obrażeń",
+        "minuty": 25
+    },
+    {
+        "numer": 20,
+        "opis": "Nielegalne posiadanie materiałów wybuchowych",
+        "minuty": 35
+    },
+    {
+        "numer": 21,
+        "opis": "Spowodowanie wybuchu lub podpalenia zagrażającego ludziom",
+        "minuty": 50
+    },
+    {
+        "numer": 22,
+        "opis": "Posiadanie substancji zabronionych",
+        "minuty": 10
+    },
+    {
+        "numer": 23,
+        "opis": "Handel substancjami zabronionymi",
+        "minuty": 30
+    },
+    {
+        "numer": 24,
+        "opis": "Produkcja substancji zabronionych",
+        "minuty": 40
+    },
+    {
+        "numer": 25,
+        "opis": "Ucieczka przed patrolem po poleceniu zatrzymania",
+        "minuty": 15
+    },
+    {
+        "numer": 26,
+        "opis": "Czynna napaść na funkcjonariusza",
+        "minuty": 30
+    },
+    {
+        "numer": 27,
+        "opis": "Utrudnianie interwencji z użyciem przemocy",
+        "minuty": 20
+    },
+    {
+        "numer": 28,
+        "opis": "Próba przekupienia funkcjonariusza",
+        "minuty": 20
+    },
+    {
+        "numer": 29,
+        "opis": "Przyjęcie łapówki przez funkcjonariusza",
+        "minuty": 30
+    },
+    {
+        "numer": 30,
+        "opis": "Podszywanie się pod funkcjonariusza",
+        "minuty": 20
+    },
+    {
+        "numer": 31,
+        "opis": "Fałszowanie dokumentów lub posługiwanie się nimi",
+        "minuty": 20
+    },
+    {
+        "numer": 32,
+        "opis": "Niszczenie albo ukrywanie dowodów",
+        "minuty": 15
+    },
+    {
+        "numer": 33,
+        "opis": "Celowe składanie fałszywych zeznań",
+        "minuty": 15
+    },
+    {
+        "numer": 34,
+        "opis": "Udział w zorganizowanej grupie przestępczej",
+        "minuty": 35
+    },
+    {
+        "numer": 35,
+        "opis": "Kierowanie zorganizowaną grupą przestępczą",
+        "minuty": 50
+    },
+    {
+        "numer": 36,
+        "opis": "Ucieczka z konwoju lub zakładu karnego",
+        "minuty": 30
+    },
+    {
+        "numer": 37,
+        "opis": "Próba ucieczki z konwoju lub zakładu karnego",
+        "minuty": 15
+    },
+    {
+        "numer": 38,
+        "opis": "Pomoc w ucieczce osadzonego",
+        "minuty": 25
+    },
+    {
+        "numer": 39,
+        "opis": "Przemyt broni lub substancji zabronionych do więzienia",
+        "minuty": 25
+    },
+    {
+        "numer": 40,
+        "opis": "Zorganizowanie buntu z użyciem przemocy",
+        "minuty": 35
+    },
+    {
+        "numer": 41,
+        "opis": "Udział w buncie z użyciem przemocy",
+        "minuty": 20
+    },
+    {
+        "numer": 42,
+        "opis": "Wtargnięcie na zabezpieczony teren zakładu karnego",
+        "minuty": 15
+    },
+    {
+        "numer": 43,
+        "opis": "Umyślne uszkodzenie zabezpieczeń więzienia",
+        "minuty": 20
+    },
+    {
+        "numer": 44,
+        "opis": "Niepowrót z przepustki bez usprawiedliwienia",
+        "minuty": 15
+    },
+    {
+        "numer": 45,
+        "opis": "Celowe spowodowanie wypadku zagrażającego ludziom",
+        "minuty": 30
+    }
+];
+
+function normalizeParagrafQuery(value) {
+    return String(value).toLocaleLowerCase("pl").normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l").trim();
+}
+
+function getParagrafSuggestions(value) {
+    const query = normalizeParagrafQuery(value);
+    const number = /^(?:§\s*)?(\d+)$/.exec(query);
+    return PARAGRAFY_RP.filter(p => number
+        ? p.numer === Number(number[1])
+        : normalizeParagrafQuery("§" + p.numer + " " + p.opis).includes(query)
+    ).slice(0, 25).map(p => ({
+        name: ("§" + p.numer + " — " + p.opis + " | " + p.minuty + " min (RP)").slice(0, 100),
+        value: "§" + p.numer + " — " + p.opis
+    }));
+}
+
 const commands = [
     new SlashCommandBuilder()
         .setName("osadzony-dodaj")
         .setDescription("Dodaje osadzonego do rejestru")
         .addStringOption(o => o.setName("imie").setDescription("Imię i nazwisko osadzonego").setRequired(true))
-        .addStringOption(o => o.setName("paragraf").setDescription("Paragraf / paragrafy").setRequired(true))
+        .addStringOption(o => o.setName("paragraf").setDescription("Taryfikator RP: wyszukaj numer lub czyn; kilka paragrafów wpisz ręcznie").setAutocomplete(true).setRequired(true))
         .addStringOption(o => o.setName("wyrok").setDescription("Np. 1 rok, 6 miesięcy, 30 minut").setRequired(true))
         .addStringOption(o => o.setName("poczatek").setDescription("Początek kary HH:MM").setRequired(true))
         .addStringOption(o => o.setName("koniec").setDescription("Koniec kary HH:MM").setRequired(true))
@@ -333,7 +579,7 @@ const commands = [
         .setDescription("Edytuje dane osadzonego")
         .addStringOption(o => o.setName("id").setDescription("Np. O-001").setRequired(true))
         .addStringOption(o => o.setName("cela").setDescription("Nowa cela").setRequired(false))
-        .addStringOption(o => o.setName("paragraf").setDescription("Nowy paragraf").setRequired(false))
+        .addStringOption(o => o.setName("paragraf").setDescription("Taryfikator RP: wyszukaj numer lub czyn; kilka paragrafów wpisz ręcznie").setAutocomplete(true).setRequired(false))
         .addStringOption(o => o.setName("wyrok").setDescription("Nowy wyrok").setRequired(false))
         .addStringOption(o => o.setName("poczatek").setDescription("Nowy początek HH:MM").setRequired(false))
         .addStringOption(o => o.setName("koniec").setDescription("Nowy koniec HH:MM").setRequired(false))
@@ -371,6 +617,18 @@ client.once("ready", async () => {
 });
 
 client.on("interactionCreate", async interaction => {
+    if (interaction.isAutocomplete()) {
+        const focused = interaction.options.getFocused(true);
+        const supported = ["osadzony-dodaj", "osadzony-edytuj"].includes(interaction.commandName)
+            && focused.name === "paragraf";
+        try {
+            await interaction.respond(supported && hasPermission(interaction)
+                ? getParagrafSuggestions(focused.value) : []);
+        } catch (error) {
+            console.error("Błąd podpowiedzi paragrafów:", error);
+        }
+        return;
+    }
     if (!interaction.isChatInputCommand() && !interaction.isButton() && !interaction.isModalSubmit()) return;
 
     // ==================================================
