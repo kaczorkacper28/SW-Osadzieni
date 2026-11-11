@@ -535,6 +535,581 @@ const PARAGRAFY_RP = [
         "numer": 45,
         "opis": "Celowe spowodowanie wypadku zagrażającego ludziom",
         "minuty": 30
+    },
+    {
+        "numer": 46,
+        "opis": "Paserstwo — świadome kupowanie lub sprzedaż skradzionych rzeczy",
+        "minuty": 15
+    },
+    {
+        "numer": 47,
+        "opis": "Przywłaszczenie powierzonego mienia",
+        "minuty": 15
+    },
+    {
+        "numer": 48,
+        "opis": "Wyłudzenie okupu",
+        "minuty": 30
+    },
+    {
+        "numer": 49,
+        "opis": "Szantaż",
+        "minuty": 20
+    },
+    {
+        "numer": 50,
+        "opis": "Uporczywe nękanie",
+        "minuty": 15
+    },
+    {
+        "numer": 51,
+        "opis": "Zmuszanie osoby do określonego zachowania przemocą lub groźbą",
+        "minuty": 20
+    },
+    {
+        "numer": 52,
+        "opis": "Nielegalny handel materiałami wybuchowymi",
+        "minuty": 40
+    },
+    {
+        "numer": 53,
+        "opis": "Celowe wywołanie fałszywego alarmu o zagrożeniu",
+        "minuty": 20
+    },
+    {
+        "numer": 54,
+        "opis": "Świadome fałszywe oskarżenie innej osoby o przestępstwo",
+        "minuty": 20
+    },
+    {
+        "numer": 55,
+        "opis": "Zastraszanie świadka",
+        "minuty": 25
+    },
+    {
+        "numer": 56,
+        "opis": "Zmuszanie świadka do zmiany zeznań",
+        "minuty": 25
+    },
+    {
+        "numer": 57,
+        "opis": "Bezprawne ujawnienie danych chronionego świadka",
+        "minuty": 25
+    },
+    {
+        "numer": 58,
+        "opis": "Złamanie sądowego zakazu zbliżania się",
+        "minuty": 15
+    },
+    {
+        "numer": 59,
+        "opis": "Niszczenie lub zdejmowanie zabezpieczenia dowodowego",
+        "minuty": 15
+    },
+    {
+        "numer": 60,
+        "opis": "Uwolnienie osoby zatrzymanej z użyciem przemocy",
+        "minuty": 35
+    },
+    {
+        "numer": 61,
+        "opis": "Kradzież wyposażenia służbowego",
+        "minuty": 25
+    },
+    {
+        "numer": 62,
+        "opis": "Bezprawne przekazanie broni służbowej osobie nieuprawnionej",
+        "minuty": 35
+    },
+    {
+        "numer": 63,
+        "opis": "Nadużycie uprawnień służbowych powodujące szkodę",
+        "minuty": 30
+    },
+    {
+        "numer": 64,
+        "opis": "Fałszowanie dokumentacji służbowej",
+        "minuty": 25
+    },
+    {
+        "numer": 65,
+        "opis": "Celowe ujawnienie informacji o konwoju w celu umożliwienia ataku",
+        "minuty": 30
+    },
+    {
+        "numer": 66,
+        "opis": "Przejęcie pojazdu przez zmuszenie kierowcy do jego oddania",
+        "minuty": 30
+    },
+    {
+        "numer": 67,
+        "opis": "Prowadzenie pojazdu pod wpływem alkoholu lub narkotyków",
+        "minuty": 15
+    },
+    {
+        "numer": 68,
+        "opis": "Ucieczka z miejsca wypadku z osobami rannymi",
+        "minuty": 20
+    },
+    {
+        "numer": 69,
+        "opis": "Celowe blokowanie przejazdu służb ratunkowych podczas akcji",
+        "minuty": 15
+    },
+    {
+        "numer": 70,
+        "opis": "Sabotaż infrastruktury powodujący zagrożenie dla ludzi",
+        "minuty": 40
+    },
+    {
+        "numer": 71,
+        "opis": "Usiłowanie rozboju",
+        "minuty": 20
+    },
+    {
+        "numer": 72,
+        "opis": "Kradzież tożsamości",
+        "minuty": 20
+    },
+    {
+        "numer": 73,
+        "opis": "Wyłudzenie kredytu lub pożyczki",
+        "minuty": 25
+    },
+    {
+        "numer": 74,
+        "opis": "Wyłudzenie odszkodowania",
+        "minuty": 25
+    },
+    {
+        "numer": 75,
+        "opis": "Fałszowanie pieniędzy",
+        "minuty": 35
+    },
+    {
+        "numer": 76,
+        "opis": "Świadome wprowadzanie fałszywych pieniędzy do obrotu",
+        "minuty": 25
+    },
+    {
+        "numer": 77,
+        "opis": "Pranie pieniędzy pochodzących z przestępstwa",
+        "minuty": 35
+    },
+    {
+        "numer": 78,
+        "opis": "Przywłaszczenie środków publicznych",
+        "minuty": 30
+    },
+    {
+        "numer": 79,
+        "opis": "Organizowanie nielegalnego hazardu",
+        "minuty": 20
+    },
+    {
+        "numer": 80,
+        "opis": "Ustawianie przetargów w celu osiągnięcia korzyści",
+        "minuty": 25
+    },
+    {
+        "numer": 81,
+        "opis": "Bezprawne wejście do mieszkania i odmowa jego opuszczenia",
+        "minuty": 10
+    },
+    {
+        "numer": 82,
+        "opis": "Bezprawne pozbawienie człowieka wolności przez funkcjonariusza",
+        "minuty": 35
+    },
+    {
+        "numer": 83,
+        "opis": "Znęcanie się nad osobą zależną",
+        "minuty": 35
+    },
+    {
+        "numer": 84,
+        "opis": "Umyślne narażenie człowieka na bezpośrednie niebezpieczeństwo utraty życia",
+        "minuty": 25
+    },
+    {
+        "numer": 85,
+        "opis": "Nieudzielenie pomocy osobie w zagrożeniu życia, mimo możliwości bezpiecznego działania",
+        "minuty": 15
+    },
+    {
+        "numer": 86,
+        "opis": "Nieumyślne spowodowanie śmierci",
+        "minuty": 35
+    },
+    {
+        "numer": 87,
+        "opis": "Nieumyślne spowodowanie ciężkich obrażeń",
+        "minuty": 20
+    },
+    {
+        "numer": 88,
+        "opis": "Handel ludźmi",
+        "minuty": 60
+    },
+    {
+        "numer": 89,
+        "opis": "Zmuszanie człowieka do pracy",
+        "minuty": 40
+    },
+    {
+        "numer": 90,
+        "opis": "Znęcanie się nad zwierzętami",
+        "minuty": 20
+    },
+    {
+        "numer": 91,
+        "opis": "Bezprawne uzyskanie dostępu do systemu informatycznego",
+        "minuty": 20
+    },
+    {
+        "numer": 92,
+        "opis": "Kradzież danych z systemu informatycznego",
+        "minuty": 25
+    },
+    {
+        "numer": 93,
+        "opis": "Celowe zablokowanie działania systemu informatycznego",
+        "minuty": 25
+    },
+    {
+        "numer": 94,
+        "opis": "Usuwanie lub zmienianie cudzych danych bez uprawnienia",
+        "minuty": 20
+    },
+    {
+        "numer": 95,
+        "opis": "Instalowanie oprogramowania szpiegującego bez zgody",
+        "minuty": 20
+    },
+    {
+        "numer": 96,
+        "opis": "Przechwytywanie prywatnej korespondencji",
+        "minuty": 15
+    },
+    {
+        "numer": 97,
+        "opis": "Bezprawne ujawnienie dokumentacji medycznej",
+        "minuty": 20
+    },
+    {
+        "numer": 98,
+        "opis": "Bezprawne ujawnienie informacji niejawnych",
+        "minuty": 30
+    },
+    {
+        "numer": 99,
+        "opis": "Ukrywanie sprawcy w celu udaremnienia jego zatrzymania",
+        "minuty": 20
+    },
+    {
+        "numer": 100,
+        "opis": "Świadome fabrykowanie dowodów przeciwko innej osobie",
+        "minuty": 30
+    },
+    {
+        "numer": 101,
+        "opis": "Nakłanianie innej osoby do popełnienia przestępstwa",
+        "minuty": 20
+    },
+    {
+        "numer": 102,
+        "opis": "Świadome finansowanie działalności przestępczej",
+        "minuty": 35
+    },
+    {
+        "numer": 103,
+        "opis": "Używanie przemocy w celu wymuszenia decyzji urzędowej",
+        "minuty": 30
+    },
+    {
+        "numer": 104,
+        "opis": "Niestosowanie się do sądowego zakazu prowadzenia pojazdów",
+        "minuty": 20
+    },
+    {
+        "numer": 105,
+        "opis": "Prowadzenie pojazdu pomimo cofnięcia uprawnień",
+        "minuty": 15
+    },
+    {
+        "numer": 106,
+        "opis": "Organizowanie nielegalnego wyścigu stwarzającego zagrożenie",
+        "minuty": 20
+    },
+    {
+        "numer": 107,
+        "opis": "Udział w nielegalnym wyścigu stwarzającym zagrożenie",
+        "minuty": 15
+    },
+    {
+        "numer": 108,
+        "opis": "Nieumyślne spowodowanie wypadku z ciężko rannymi",
+        "minuty": 25
+    },
+    {
+        "numer": 109,
+        "opis": "Nieumyślne spowodowanie śmiertelnego wypadku",
+        "minuty": 40
+    },
+    {
+        "numer": 110,
+        "opis": "Manipulowanie sygnalizacją drogową i stworzenie zagrożenia",
+        "minuty": 30
+    },
+    {
+        "numer": 111,
+        "opis": "Ustawienie niebezpiecznej przeszkody na drodze",
+        "minuty": 25
+    },
+    {
+        "numer": 112,
+        "opis": "Rzucanie przedmiotami w jadące pojazdy i stworzenie zagrożenia",
+        "minuty": 20
+    },
+    {
+        "numer": 113,
+        "opis": "Celowe skażenie wody pitnej",
+        "minuty": 50
+    },
+    {
+        "numer": 114,
+        "opis": "Porzucenie niebezpiecznych odpadów i zagrożenie ludziom",
+        "minuty": 30
+    },
+    {
+        "numer": 115,
+        "opis": "Celowe uszkodzenie sprzętu ratunkowego",
+        "minuty": 25
+    },
+    {
+        "numer": 116,
+        "opis": "Bezprawne posiadanie amunicji",
+        "minuty": 15
+    },
+    {
+        "numer": 117,
+        "opis": "Nielegalne wytwarzanie broni",
+        "minuty": 40
+    },
+    {
+        "numer": 118,
+        "opis": "Usunięcie oznaczeń identyfikacyjnych broni",
+        "minuty": 20
+    },
+    {
+        "numer": 119,
+        "opis": "Przerabianie numeru VIN pojazdu",
+        "minuty": 20
+    },
+    {
+        "numer": 120,
+        "opis": "Używanie tablic rejestracyjnych przypisanych do innego pojazdu",
+        "minuty": 15
+    },
+    {
+        "numer": 121,
+        "opis": "Przygotowanie napadu przez gromadzenie broni i ustalenie planu",
+        "minuty": 20
+    },
+    {
+        "numer": 122,
+        "opis": "Zlecenie zabójstwa",
+        "minuty": 60
+    },
+    {
+        "numer": 123,
+        "opis": "Zlecenie pobicia",
+        "minuty": 25
+    },
+    {
+        "numer": 124,
+        "opis": "Stosowanie tortur",
+        "minuty": 50
+    },
+    {
+        "numer": 125,
+        "opis": "Umyślne podanie trucizny z zamiarem wyrządzenia krzywdy",
+        "minuty": 40
+    },
+    {
+        "numer": 126,
+        "opis": "Podanie środka odurzającego bez wiedzy i zgody osoby",
+        "minuty": 30
+    },
+    {
+        "numer": 127,
+        "opis": "Porzucenie osoby pozostającej pod opieką w warunkach zagrożenia",
+        "minuty": 25
+    },
+    {
+        "numer": 128,
+        "opis": "Zorganizowanie zasadzki na konwój",
+        "minuty": 40
+    },
+    {
+        "numer": 129,
+        "opis": "Przejęcie kontroli nad statkiem powietrznym siłą lub groźbą",
+        "minuty": 60
+    },
+    {
+        "numer": 130,
+        "opis": "Przejęcie kontroli nad pociągiem siłą lub groźbą",
+        "minuty": 50
+    },
+    {
+        "numer": 131,
+        "opis": "Umyślne spowodowanie katastrofy komunikacyjnej",
+        "minuty": 60
+    },
+    {
+        "numer": 132,
+        "opis": "Oślepianie pilota i stworzenie zagrożenia dla lotu",
+        "minuty": 30
+    },
+    {
+        "numer": 133,
+        "opis": "Bezprawne wtargnięcie na czynny pas startowy i stworzenie zagrożenia",
+        "minuty": 25
+    },
+    {
+        "numer": 134,
+        "opis": "Umyślne uszkodzenie torów kolejowych",
+        "minuty": 40
+    },
+    {
+        "numer": 135,
+        "opis": "Bezprawne odłączenie aparatury podtrzymującej życie",
+        "minuty": 50
+    },
+    {
+        "numer": 136,
+        "opis": "Kradzież leków kontrolowanych z placówki medycznej",
+        "minuty": 25
+    },
+    {
+        "numer": 137,
+        "opis": "Nielegalny handel lekami kontrolowanymi",
+        "minuty": 30
+    },
+    {
+        "numer": 138,
+        "opis": "Fałszowanie recept",
+        "minuty": 20
+    },
+    {
+        "numer": 139,
+        "opis": "Wykonywanie zabiegów medycznych bez uprawnień i narażenie pacjenta",
+        "minuty": 30
+    },
+    {
+        "numer": 140,
+        "opis": "Świadome podanie pacjentowi szkodliwej substancji zamiast leku",
+        "minuty": 40
+    },
+    {
+        "numer": 141,
+        "opis": "Wymuszanie pieniędzy lub rzeczy od współosadzonego",
+        "minuty": 20
+    },
+    {
+        "numer": 142,
+        "opis": "Zmuszanie współosadzonego do popełnienia przestępstwa",
+        "minuty": 25
+    },
+    {
+        "numer": 143,
+        "opis": "Kradzież kluczy lub kart dostępu do zakładu karnego",
+        "minuty": 20
+    },
+    {
+        "numer": 144,
+        "opis": "Wykonanie lub posiadanie narzędzia przeznaczonego do ucieczki",
+        "minuty": 15
+    },
+    {
+        "numer": 145,
+        "opis": "Celowe uszkodzenie elektronicznego urządzenia dozoru",
+        "minuty": 15
+    },
+    {
+        "numer": 146,
+        "opis": "Bezprawne umożliwienie osadzonemu opuszczenia zakładu przez funkcjonariusza",
+        "minuty": 35
+    },
+    {
+        "numer": 147,
+        "opis": "Zmuszanie osadzonego przemocą do złożenia oświadczenia",
+        "minuty": 30
+    },
+    {
+        "numer": 148,
+        "opis": "Bezprawne przetrzymywanie osadzonego po zakończeniu kary",
+        "minuty": 30
+    },
+    {
+        "numer": 149,
+        "opis": "Przekupienie świadka w zamian za fałszywe zeznania",
+        "minuty": 25
+    },
+    {
+        "numer": 150,
+        "opis": "Przyjęcie korzyści przez świadka w zamian za fałszywe zeznania",
+        "minuty": 20
+    },
+    {
+        "numer": 151,
+        "opis": "Fałszowanie opinii przez biegłego",
+        "minuty": 25
+    },
+    {
+        "numer": 152,
+        "opis": "Bezprawne usunięcie akt sprawy z sądu lub urzędu",
+        "minuty": 25
+    },
+    {
+        "numer": 153,
+        "opis": "Sprzedaż cudzej nieruchomości przy użyciu fałszywego pełnomocnictwa",
+        "minuty": 30
+    },
+    {
+        "numer": 154,
+        "opis": "Wielokrotna sprzedaż tego samego pojazdu różnym osobom w celu oszustwa",
+        "minuty": 25
+    },
+    {
+        "numer": 155,
+        "opis": "Organizowanie fikcyjnej zbiórki pieniędzy",
+        "minuty": 20
+    },
+    {
+        "numer": 156,
+        "opis": "Wymuszanie opłat za pozorną ochronę firmy",
+        "minuty": 25
+    },
+    {
+        "numer": 157,
+        "opis": "Ukrywanie majątku objętego zajęciem sądowym",
+        "minuty": 20
+    },
+    {
+        "numer": 158,
+        "opis": "Celowe niszczenie zabytku",
+        "minuty": 25
+    },
+    {
+        "numer": 159,
+        "opis": "Okradanie zwłok lub miejsca pochówku",
+        "minuty": 20
+    },
+    {
+        "numer": 160,
+        "opis": "Bezprawne ukrycie zwłok w celu zatajenia śmierci",
+        "minuty": 30
     }
 ];
 
