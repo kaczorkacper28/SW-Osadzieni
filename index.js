@@ -617,12 +617,12 @@ client.once("ready", async () => {
 });
 
 client.on("interactionCreate", async interaction => {
-    if (interaction.isAutocomplete()) {
-        const focused = interaction.options.getFocused(true);
-        const supported = ["osadzony-dodaj", "osadzony-edytuj"].includes(interaction.commandName)
-            && focused.name === "paragraf";
+    // Taryfikator jest publiczny; uprawnienia sprawdzamy przy wykonaniu komendy.
+    if (interaction.isAutocomplete?.()) {
+        if (!["osadzony-dodaj", "osadzony-edytuj"].includes(interaction.commandName)) return;
         try {
-            await interaction.respond(supported && hasPermission(interaction)
+            const focused = interaction.options.getFocused(true);
+            await interaction.respond(focused.name === "paragraf"
                 ? getParagrafSuggestions(focused.value) : []);
         } catch (error) {
             console.error("Błąd podpowiedzi paragrafów:", error);
