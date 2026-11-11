@@ -31,7 +31,29 @@ const STAFF_ROLE_NAMES = [
     "Generał Inspektor SW ⚖️👑",
     "Generał SW ⚖️⭐",
     "Dowódca zmiany",
-    "zca. Dowódca zmiany"
+    "zca. Dowódca zmiany",
+    "Kapral",
+    "Starszy kapral",
+    "Plutonowy",
+    "Sierżant",
+    "Starszy sierżant",
+    "Sierżant sztabowy",
+    "Starszy sierżant sztabowy",
+    "Młodszy chorąży",
+    "Chorąży",
+    "Starszy chorąży",
+    "Chorąży sztabowy",
+    "Starszy chorąży sztabowy",
+    "Podporucznik",
+    "Porucznik",
+    "Kapitan",
+    "Major",
+    "Podpułkownik",
+    "Pułkownik",
+    "Generał",
+    "Generał Inspektor",
+    "Inspektor Generalny",
+    "Inspektor Generał"
 ];
 
 // TYLKO ta ranga może pauzować/wznawiać/zmieniać czas kary.
@@ -77,9 +99,26 @@ function saveDatabase() {
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// Porównuj pełne nazwy stopni, ignorując ozdobniki i końcowe „SW”.
+// Nie używaj pozycji roli: wyżej mogą znajdować się role innych służb.
+function normalizeStaffRoleName(name) {
+    return String(name)
+        .normalize("NFKC")
+        .toLocaleLowerCase("pl")
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .replace(/\s+sw$/, "")
+        .trim();
+}
+
 function hasStaffRole(member) {
-    if (!member?.roles) return false;
-    return STAFF_ROLE_NAMES.some(name => member.roles.cache.some(role => role.name === name));
+    if (!member?.roles?.cache) return false;
+    return member.roles.cache.some(role =>
+        STAFF_ROLE_NAMES.some(name =>
+            normalizeStaffRoleName(role.name) === normalizeStaffRoleName(name)
+        )
+    );
 }
 
 function hasTimerFullRole(member) {
