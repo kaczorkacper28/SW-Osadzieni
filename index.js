@@ -1110,6 +1110,1206 @@ const PARAGRAFY_RP = [
         "numer": 160,
         "opis": "Bezprawne ukrycie zwłok w celu zatajenia śmierci",
         "minuty": 30
+    },
+    {
+        "numer": 161,
+        "opis": "Włamanie do skarbca bankowego",
+        "minuty": 25
+    },
+    {
+        "numer": 162,
+        "opis": "Kradzież ładunku z transportu towarowego",
+        "minuty": 20
+    },
+    {
+        "numer": 163,
+        "opis": "Kradzież paliwa z magazynu hurtowego",
+        "minuty": 20
+    },
+    {
+        "numer": 164,
+        "opis": "Kradzież materiałów niebezpiecznych z zakładu",
+        "minuty": 25
+    },
+    {
+        "numer": 165,
+        "opis": "Kradzież sprzętu z placu budowy",
+        "minuty": 20
+    },
+    {
+        "numer": 166,
+        "opis": "Kradzież radiowozu z jednostki",
+        "minuty": 25
+    },
+    {
+        "numer": 167,
+        "opis": "Kradzież ambulansu podczas akcji",
+        "minuty": 25
+    },
+    {
+        "numer": 168,
+        "opis": "Kradzież wozu strażackiego podczas akcji",
+        "minuty": 25
+    },
+    {
+        "numer": 169,
+        "opis": "Kradzież łodzi z przystani",
+        "minuty": 20
+    },
+    {
+        "numer": 170,
+        "opis": "Kradzież śmigłowca z hangaru",
+        "minuty": 30
+    },
+    {
+        "numer": 171,
+        "opis": "Kradzież przesyłek z sortowni",
+        "minuty": 20
+    },
+    {
+        "numer": 172,
+        "opis": "Kradzież urządzeń z infrastruktury kolejowej",
+        "minuty": 20
+    },
+    {
+        "numer": 173,
+        "opis": "Kradzież energii przez nielegalne przyłącze",
+        "minuty": 15
+    },
+    {
+        "numer": 174,
+        "opis": "Kradzież wody przez obejście licznika",
+        "minuty": 15
+    },
+    {
+        "numer": 175,
+        "opis": "Kradzież gazu przez nielegalne przyłącze",
+        "minuty": 20
+    },
+    {
+        "numer": 176,
+        "opis": "Włamanie do magazynu dowodów",
+        "minuty": 25
+    },
+    {
+        "numer": 177,
+        "opis": "Kradzież dokumentów z kancelarii tajnej",
+        "minuty": 25
+    },
+    {
+        "numer": 178,
+        "opis": "Kradzież wyposażenia wojskowego z magazynu",
+        "minuty": 20
+    },
+    {
+        "numer": 179,
+        "opis": "Kradzież eksponatu z muzeum",
+        "minuty": 20
+    },
+    {
+        "numer": 180,
+        "opis": "Kradzież depozytów osadzonych przez personel",
+        "minuty": 25
+    },
+    {
+        "numer": 181,
+        "opis": "Wyłudzenie zapłaty za nieistniejący pojazd",
+        "minuty": 20
+    },
+    {
+        "numer": 182,
+        "opis": "Wyłudzenie zaliczki za nieistniejące mieszkanie",
+        "minuty": 20
+    },
+    {
+        "numer": 183,
+        "opis": "Wyłudzenie opłaty za fikcyjną usługę transportową",
+        "minuty": 20
+    },
+    {
+        "numer": 184,
+        "opis": "Wyłudzenie zapłaty za niewykonaną naprawę",
+        "minuty": 20
+    },
+    {
+        "numer": 185,
+        "opis": "Wyłudzenie dotacji na podstawie fikcyjnej działalności",
+        "minuty": 25
+    },
+    {
+        "numer": 186,
+        "opis": "Wyłudzenie świadczenia przy użyciu cudzej tożsamości",
+        "minuty": 20
+    },
+    {
+        "numer": 187,
+        "opis": "Wyłudzenie przelewu przez podszywanie się pod bank",
+        "minuty": 25
+    },
+    {
+        "numer": 188,
+        "opis": "Wyłudzenie pieniędzy przez podszywanie się pod krewnego",
+        "minuty": 25
+    },
+    {
+        "numer": 189,
+        "opis": "Wyłudzenie pieniędzy pod pozorem działań Policji",
+        "minuty": 25
+    },
+    {
+        "numer": 190,
+        "opis": "Wyłudzenie kaucji za nieistniejący najem",
+        "minuty": 20
+    },
+    {
+        "numer": 191,
+        "opis": "Sprzedaż świadomie sfałszowanego aktu własności",
+        "minuty": 25
+    },
+    {
+        "numer": 192,
+        "opis": "Oszustwo przy sprzedaży pojazdu objętego zajęciem",
+        "minuty": 25
+    },
+    {
+        "numer": 193,
+        "opis": "Zatajenie poważnej usterki pojazdu w celu oszustwa",
+        "minuty": 20
+    },
+    {
+        "numer": 194,
+        "opis": "Fałszowanie przebiegu pojazdu w celu oszustwa",
+        "minuty": 20
+    },
+    {
+        "numer": 195,
+        "opis": "Wyłudzenie zwrotu podatku przy użyciu fikcyjnych faktur",
+        "minuty": 25
+    },
+    {
+        "numer": 196,
+        "opis": "Organizowanie piramidy finansowej",
+        "minuty": 25
+    },
+    {
+        "numer": 197,
+        "opis": "Przejęcie cudzej wypłaty przy użyciu fałszywego upoważnienia",
+        "minuty": 20
+    },
+    {
+        "numer": 198,
+        "opis": "Wyłudzenie towaru przy użyciu fałszywego potwierdzenia przelewu",
+        "minuty": 20
+    },
+    {
+        "numer": 199,
+        "opis": "Wyłudzenie pieniędzy za fikcyjną inwestycję",
+        "minuty": 25
+    },
+    {
+        "numer": 200,
+        "opis": "Celowe spowodowanie kolizji w celu wyłudzenia odszkodowania",
+        "minuty": 25
+    },
+    {
+        "numer": 201,
+        "opis": "Podrobienie dokumentu tożsamości",
+        "minuty": 20
+    },
+    {
+        "numer": 202,
+        "opis": "Podrobienie prawa jazdy",
+        "minuty": 20
+    },
+    {
+        "numer": 203,
+        "opis": "Podrobienie dowodu rejestracyjnego",
+        "minuty": 20
+    },
+    {
+        "numer": 204,
+        "opis": "Podrobienie pozwolenia na broń",
+        "minuty": 25
+    },
+    {
+        "numer": 205,
+        "opis": "Podrobienie legitymacji służbowej",
+        "minuty": 25
+    },
+    {
+        "numer": 206,
+        "opis": "Podrobienie nakazu zatrzymania",
+        "minuty": 25
+    },
+    {
+        "numer": 207,
+        "opis": "Podrobienie nakazu przeszukania",
+        "minuty": 25
+    },
+    {
+        "numer": 208,
+        "opis": "Podrobienie orzeczenia sądu",
+        "minuty": 25
+    },
+    {
+        "numer": 209,
+        "opis": "Podrobienie dokumentu zwolnienia z więzienia",
+        "minuty": 25
+    },
+    {
+        "numer": 210,
+        "opis": "Podrobienie przepustki więziennej",
+        "minuty": 20
+    },
+    {
+        "numer": 211,
+        "opis": "Podrobienie zaświadczenia lekarskiego",
+        "minuty": 20
+    },
+    {
+        "numer": 212,
+        "opis": "Podrobienie świadectwa kwalifikacji medycznych",
+        "minuty": 25
+    },
+    {
+        "numer": 213,
+        "opis": "Podrobienie zaświadczenia o badaniu technicznym",
+        "minuty": 20
+    },
+    {
+        "numer": 214,
+        "opis": "Podrobienie polisy ubezpieczeniowej",
+        "minuty": 20
+    },
+    {
+        "numer": 215,
+        "opis": "Podrobienie pełnomocnictwa do konta bankowego",
+        "minuty": 20
+    },
+    {
+        "numer": 216,
+        "opis": "Podrobienie umowy zatrudnienia w celu wyłudzenia",
+        "minuty": 20
+    },
+    {
+        "numer": 217,
+        "opis": "Podrobienie zezwolenia na przewóz niebezpiecznych materiałów",
+        "minuty": 20
+    },
+    {
+        "numer": 218,
+        "opis": "Podrobienie protokołu kontroli budowlanej",
+        "minuty": 20
+    },
+    {
+        "numer": 219,
+        "opis": "Podrobienie protokołu zabezpieczenia dowodów",
+        "minuty": 25
+    },
+    {
+        "numer": 220,
+        "opis": "Podrobienie podpisu sędziego w dokumentacji sprawy",
+        "minuty": 25
+    },
+    {
+        "numer": 221,
+        "opis": "Przejęcie konta bankowego bez uprawnienia",
+        "minuty": 25
+    },
+    {
+        "numer": 222,
+        "opis": "Przejęcie konta urzędnika w systemie służbowym",
+        "minuty": 20
+    },
+    {
+        "numer": 223,
+        "opis": "Wyłudzanie haseł przez fałszywą stronę logowania",
+        "minuty": 25
+    },
+    {
+        "numer": 224,
+        "opis": "Szyfrowanie cudzych danych w celu wymuszenia okupu",
+        "minuty": 30
+    },
+    {
+        "numer": 225,
+        "opis": "Sprzedaż wykradzionej bazy danych mieszkańców",
+        "minuty": 25
+    },
+    {
+        "numer": 226,
+        "opis": "Sprzedaż wykradzionych danych kart płatniczych",
+        "minuty": 25
+    },
+    {
+        "numer": 227,
+        "opis": "Bezprawna zmiana salda w systemie bankowym",
+        "minuty": 20
+    },
+    {
+        "numer": 228,
+        "opis": "Bezprawna zmiana wpisów w rejestrze wyroków",
+        "minuty": 25
+    },
+    {
+        "numer": 229,
+        "opis": "Bezprawna zmiana wpisów w rejestrze pojazdów",
+        "minuty": 25
+    },
+    {
+        "numer": 230,
+        "opis": "Bezprawna zmiana danych w ewidencji osadzonych",
+        "minuty": 25
+    },
+    {
+        "numer": 231,
+        "opis": "Sabotaż systemu numeru alarmowego",
+        "minuty": 30
+    },
+    {
+        "numer": 232,
+        "opis": "Sabotaż systemu dyspozytorni ratunkowej",
+        "minuty": 30
+    },
+    {
+        "numer": 233,
+        "opis": "Bezprawne przejęcie obrazu monitoringu więzienia",
+        "minuty": 25
+    },
+    {
+        "numer": 234,
+        "opis": "Instalacja ukrytego podsłuchu w pomieszczeniu służbowym",
+        "minuty": 20
+    },
+    {
+        "numer": 235,
+        "opis": "Bezprawne kopiowanie karty dostępu do obiektu chronionego",
+        "minuty": 20
+    },
+    {
+        "numer": 236,
+        "opis": "Przejęcie sterowania bramą więzienną przez system komputerowy",
+        "minuty": 25
+    },
+    {
+        "numer": 237,
+        "opis": "Zakłócanie łączności radiowej podczas akcji ratunkowej",
+        "minuty": 30
+    },
+    {
+        "numer": 238,
+        "opis": "Nadawanie fałszywych rozkazów na kanale służbowym",
+        "minuty": 25
+    },
+    {
+        "numer": 239,
+        "opis": "Usuwanie kopii zapasowych w celu ukrycia przestępstwa",
+        "minuty": 25
+    },
+    {
+        "numer": 240,
+        "opis": "Bezprawna sprzedaż danych lokalizacyjnych funkcjonariusza",
+        "minuty": 20
+    },
+    {
+        "numer": 241,
+        "opis": "Przemyt broni przez granicę",
+        "minuty": 30
+    },
+    {
+        "numer": 242,
+        "opis": "Przemyt amunicji przez granicę",
+        "minuty": 30
+    },
+    {
+        "numer": 243,
+        "opis": "Przemyt materiałów wybuchowych przez granicę",
+        "minuty": 35
+    },
+    {
+        "numer": 244,
+        "opis": "Przemyt substancji zabronionych przez granicę",
+        "minuty": 25
+    },
+    {
+        "numer": 245,
+        "opis": "Organizowanie magazynu nielegalnej broni",
+        "minuty": 25
+    },
+    {
+        "numer": 246,
+        "opis": "Przerabianie broni na automatyczną bez zezwolenia",
+        "minuty": 30
+    },
+    {
+        "numer": 247,
+        "opis": "Wytwarzanie amunicji bez wymaganego zezwolenia",
+        "minuty": 25
+    },
+    {
+        "numer": 248,
+        "opis": "Przekazanie broni osobie planującej napad",
+        "minuty": 30
+    },
+    {
+        "numer": 249,
+        "opis": "Użycie broni do wymuszenia opuszczenia lokalu",
+        "minuty": 30
+    },
+    {
+        "numer": 250,
+        "opis": "Oddanie strzałów w kierunku zamieszkanego budynku",
+        "minuty": 35
+    },
+    {
+        "numer": 251,
+        "opis": "Oddanie strzałów w kierunku jadącego pojazdu",
+        "minuty": 35
+    },
+    {
+        "numer": 252,
+        "opis": "Ostrzelanie infrastruktury energetycznej",
+        "minuty": 30
+    },
+    {
+        "numer": 253,
+        "opis": "Podłożenie ładunku wybuchowego w budynku publicznym",
+        "minuty": 35
+    },
+    {
+        "numer": 254,
+        "opis": "Podłożenie ładunku wybuchowego pod pojazdem",
+        "minuty": 35
+    },
+    {
+        "numer": 255,
+        "opis": "Zdetonowanie ładunku przy drodze publicznej",
+        "minuty": 40
+    },
+    {
+        "numer": 256,
+        "opis": "Przemyt zapalników do zakładu karnego",
+        "minuty": 30
+    },
+    {
+        "numer": 257,
+        "opis": "Celowe przekazanie broni osobie nietrzeźwej",
+        "minuty": 25
+    },
+    {
+        "numer": 258,
+        "opis": "Sprzedaż broni z zatartymi oznaczeniami",
+        "minuty": 30
+    },
+    {
+        "numer": 259,
+        "opis": "Bezprawne wyniesienie amunicji ze zbrojowni",
+        "minuty": 25
+    },
+    {
+        "numer": 260,
+        "opis": "Bezprawne wyniesienie materiałów wybuchowych z magazynu",
+        "minuty": 35
+    },
+    {
+        "numer": 261,
+        "opis": "Uprawa roślin przeznaczonych do produkcji substancji zabronionych",
+        "minuty": 25
+    },
+    {
+        "numer": 262,
+        "opis": "Prowadzenie laboratorium substancji zabronionych",
+        "minuty": 30
+    },
+    {
+        "numer": 263,
+        "opis": "Magazynowanie substancji zabronionych w celu dystrybucji",
+        "minuty": 25
+    },
+    {
+        "numer": 264,
+        "opis": "Przewóz substancji zabronionych na zlecenie handlarza",
+        "minuty": 20
+    },
+    {
+        "numer": 265,
+        "opis": "Finansowanie produkcji substancji zabronionych",
+        "minuty": 25
+    },
+    {
+        "numer": 266,
+        "opis": "Werbowanie kurierów do przemytu substancji zabronionych",
+        "minuty": 25
+    },
+    {
+        "numer": 267,
+        "opis": "Sprzedaż substancji zabronionych na terenie szkoły",
+        "minuty": 30
+    },
+    {
+        "numer": 268,
+        "opis": "Sprzedaż substancji zabronionych na terenie szpitala",
+        "minuty": 25
+    },
+    {
+        "numer": 269,
+        "opis": "Wprowadzenie substancji zabronionych do obrotu w więzieniu",
+        "minuty": 30
+    },
+    {
+        "numer": 270,
+        "opis": "Zmuszanie innej osoby do transportu substancji zabronionych",
+        "minuty": 30
+    },
+    {
+        "numer": 271,
+        "opis": "Ukrycie substancji zabronionych w cudzym bagażu",
+        "minuty": 25
+    },
+    {
+        "numer": 272,
+        "opis": "Podanie substancji odurzającej kierowcy bez jego wiedzy",
+        "minuty": 25
+    },
+    {
+        "numer": 273,
+        "opis": "Świadoma sprzedaż skażonych substancji odurzających",
+        "minuty": 30
+    },
+    {
+        "numer": 274,
+        "opis": "Kradzież prekursorów z zakładu chemicznego",
+        "minuty": 20
+    },
+    {
+        "numer": 275,
+        "opis": "Bezprawne dostarczenie prekursorów do nielegalnego laboratorium",
+        "minuty": 25
+    },
+    {
+        "numer": 276,
+        "opis": "Fałszowanie ewidencji leków kontrolowanych",
+        "minuty": 20
+    },
+    {
+        "numer": 277,
+        "opis": "Wydawanie leków kontrolowanych na fikcyjne recepty",
+        "minuty": 25
+    },
+    {
+        "numer": 278,
+        "opis": "Produkcja podrobionych leków zagrażających zdrowiu",
+        "minuty": 30
+    },
+    {
+        "numer": 279,
+        "opis": "Sprzedaż podrobionych leków ze świadomością zagrożenia",
+        "minuty": 25
+    },
+    {
+        "numer": 280,
+        "opis": "Celowe odurzanie pracownika ochrony w celu włamania",
+        "minuty": 25
+    },
+    {
+        "numer": 281,
+        "opis": "Umyślne uszkodzenie mostu używanego w ruchu",
+        "minuty": 30
+    },
+    {
+        "numer": 282,
+        "opis": "Umyślne uszkodzenie tunelu drogowego",
+        "minuty": 30
+    },
+    {
+        "numer": 283,
+        "opis": "Usunięcie znaków ostrzegających o zamkniętej drodze",
+        "minuty": 25
+    },
+    {
+        "numer": 284,
+        "opis": "Przestawienie zapór kierujące ruch na niebezpieczny odcinek",
+        "minuty": 25
+    },
+    {
+        "numer": 285,
+        "opis": "Celowe rozlanie oleju na jezdni",
+        "minuty": 25
+    },
+    {
+        "numer": 286,
+        "opis": "Uszkodzenie hamulców cudzego pojazdu",
+        "minuty": 30
+    },
+    {
+        "numer": 287,
+        "opis": "Uszkodzenie układu kierowniczego cudzego pojazdu",
+        "minuty": 30
+    },
+    {
+        "numer": 288,
+        "opis": "Celowe odłączenie oświetlenia tunelu podczas ruchu",
+        "minuty": 25
+    },
+    {
+        "numer": 289,
+        "opis": "Sabotaż sygnalizacji na przejeździe kolejowym",
+        "minuty": 25
+    },
+    {
+        "numer": 290,
+        "opis": "Ustawienie przeszkody na torach kolejowych",
+        "minuty": 30
+    },
+    {
+        "numer": 291,
+        "opis": "Wykolejenie wagonu bez osób poszkodowanych",
+        "minuty": 30
+    },
+    {
+        "numer": 292,
+        "opis": "Bezprawne przełożenie zwrotnicy pod nadjeżdżającym pociągiem",
+        "minuty": 25
+    },
+    {
+        "numer": 293,
+        "opis": "Uszkodzenie systemu sterowania ruchem kolejowym",
+        "minuty": 30
+    },
+    {
+        "numer": 294,
+        "opis": "Uszkodzenie urządzeń nawigacyjnych lotniska",
+        "minuty": 30
+    },
+    {
+        "numer": 295,
+        "opis": "Zakłócanie łączności kontroli ruchu lotniczego",
+        "minuty": 30
+    },
+    {
+        "numer": 296,
+        "opis": "Skierowanie drona w tor lotu śmigłowca ratunkowego",
+        "minuty": 25
+    },
+    {
+        "numer": 297,
+        "opis": "Celowe uszkodzenie śmigłowca przed startem",
+        "minuty": 30
+    },
+    {
+        "numer": 298,
+        "opis": "Usunięcie oznakowania niebezpiecznej przeszkody na wodzie",
+        "minuty": 25
+    },
+    {
+        "numer": 299,
+        "opis": "Celowe zatopienie cudzej jednostki pływającej",
+        "minuty": 30
+    },
+    {
+        "numer": 300,
+        "opis": "Zablokowanie drogi ewakuacyjnej podczas realnego zagrożenia",
+        "minuty": 25
+    },
+    {
+        "numer": 301,
+        "opis": "Podpalenie lasu",
+        "minuty": 30
+    },
+    {
+        "numer": 302,
+        "opis": "Podpalenie magazynu paliw",
+        "minuty": 30
+    },
+    {
+        "numer": 303,
+        "opis": "Podpalenie pustego budynku w celu zniszczenia mienia",
+        "minuty": 25
+    },
+    {
+        "numer": 304,
+        "opis": "Podpalenie pojazdu na parkingu podziemnym",
+        "minuty": 30
+    },
+    {
+        "numer": 305,
+        "opis": "Celowe rozszczelnienie instalacji gazowej",
+        "minuty": 30
+    },
+    {
+        "numer": 306,
+        "opis": "Celowe uszkodzenie hydrantów podczas pożaru",
+        "minuty": 25
+    },
+    {
+        "numer": 307,
+        "opis": "Odłączenie instalacji przeciwpożarowej w celu sabotażu",
+        "minuty": 25
+    },
+    {
+        "numer": 308,
+        "opis": "Celowe zablokowanie wyjść awaryjnych przed podpaleniem",
+        "minuty": 30
+    },
+    {
+        "numer": 309,
+        "opis": "Wylanie toksycznych substancji do rzeki",
+        "minuty": 25
+    },
+    {
+        "numer": 310,
+        "opis": "Zakopanie toksycznych odpadów na terenie mieszkalnym",
+        "minuty": 25
+    },
+    {
+        "numer": 311,
+        "opis": "Spalenie odpadów toksycznych z narażeniem ludzi",
+        "minuty": 25
+    },
+    {
+        "numer": 312,
+        "opis": "Celowe skażenie żywności przeznaczonej do sprzedaży",
+        "minuty": 30
+    },
+    {
+        "numer": 313,
+        "opis": "Celowe skażenie zapasów żywności w więzieniu",
+        "minuty": 30
+    },
+    {
+        "numer": 314,
+        "opis": "Bezprawne składowanie materiałów radioaktywnych",
+        "minuty": 25
+    },
+    {
+        "numer": 315,
+        "opis": "Porzucenie materiałów radioaktywnych w miejscu publicznym",
+        "minuty": 30
+    },
+    {
+        "numer": 316,
+        "opis": "Uszkodzenie kanalizacji powodujące skażenie terenu",
+        "minuty": 25
+    },
+    {
+        "numer": 317,
+        "opis": "Uszkodzenie oczyszczalni ścieków w celu sabotażu",
+        "minuty": 25
+    },
+    {
+        "numer": 318,
+        "opis": "Celowe uszkodzenie wału przeciwpowodziowego",
+        "minuty": 25
+    },
+    {
+        "numer": 319,
+        "opis": "Otwarcie śluzy w celu zalania zabudowań",
+        "minuty": 30
+    },
+    {
+        "numer": 320,
+        "opis": "Umyślne zniszczenie systemu ostrzegania o zagrożeniu",
+        "minuty": 25
+    },
+    {
+        "numer": 321,
+        "opis": "Przyjęcie łapówki za bezprawne zwolnienie osadzonego",
+        "minuty": 30
+    },
+    {
+        "numer": 322,
+        "opis": "Przyjęcie łapówki za pominięcie kontroli pojazdu",
+        "minuty": 25
+    },
+    {
+        "numer": 323,
+        "opis": "Przyjęcie łapówki za wydanie fałszywego zaświadczenia",
+        "minuty": 25
+    },
+    {
+        "numer": 324,
+        "opis": "Przyjęcie łapówki za ujawnienie akt sprawy",
+        "minuty": 25
+    },
+    {
+        "numer": 325,
+        "opis": "Przyjęcie łapówki za zniszczenie dowodu",
+        "minuty": 30
+    },
+    {
+        "numer": 326,
+        "opis": "Wręczenie łapówki za wydanie pozwolenia",
+        "minuty": 25
+    },
+    {
+        "numer": 327,
+        "opis": "Wymuszanie łapówki przez funkcjonariusza",
+        "minuty": 30
+    },
+    {
+        "numer": 328,
+        "opis": "Sprzedaż informacji o planowanej interwencji",
+        "minuty": 25
+    },
+    {
+        "numer": 329,
+        "opis": "Sprzedaż informacji o miejscu pobytu osoby chronionej",
+        "minuty": 25
+    },
+    {
+        "numer": 330,
+        "opis": "Celowe skierowanie patrolu w fałszywe miejsce dla pomocy sprawcy",
+        "minuty": 30
+    },
+    {
+        "numer": 331,
+        "opis": "Fałszowanie raportu z interwencji w celu ukrycia przemocy",
+        "minuty": 25
+    },
+    {
+        "numer": 332,
+        "opis": "Fałszowanie protokołu przesłuchania",
+        "minuty": 25
+    },
+    {
+        "numer": 333,
+        "opis": "Celowe usunięcie nagrania z kamery służbowej jako dowodu",
+        "minuty": 25
+    },
+    {
+        "numer": 334,
+        "opis": "Podmienienie próbki przeznaczonej do badania dowodowego",
+        "minuty": 25
+    },
+    {
+        "numer": 335,
+        "opis": "Podrzucenie broni w celu fałszywego oskarżenia",
+        "minuty": 30
+    },
+    {
+        "numer": 336,
+        "opis": "Podrzucenie substancji zabronionej w celu fałszywego oskarżenia",
+        "minuty": 30
+    },
+    {
+        "numer": 337,
+        "opis": "Wywarcie przemocą nacisku na biegłego",
+        "minuty": 25
+    },
+    {
+        "numer": 338,
+        "opis": "Grożenie sędziemu w celu zmiany orzeczenia",
+        "minuty": 30
+    },
+    {
+        "numer": 339,
+        "opis": "Grożenie obrońcy w celu wycofania się ze sprawy",
+        "minuty": 25
+    },
+    {
+        "numer": 340,
+        "opis": "Przekupienie tłumacza w celu zafałszowania zeznań",
+        "minuty": 25
+    },
+    {
+        "numer": 341,
+        "opis": "Przemyt telefonu do więzienia w celu organizacji przestępstwa",
+        "minuty": 20
+    },
+    {
+        "numer": 342,
+        "opis": "Przemyt narzędzi do cięcia krat",
+        "minuty": 25
+    },
+    {
+        "numer": 343,
+        "opis": "Dostarczenie osadzonemu fałszywych dokumentów do ucieczki",
+        "minuty": 25
+    },
+    {
+        "numer": 344,
+        "opis": "Podmienienie osadzonego podczas konwoju",
+        "minuty": 25
+    },
+    {
+        "numer": 345,
+        "opis": "Przejęcie munduru funkcjonariusza w celu ucieczki",
+        "minuty": 25
+    },
+    {
+        "numer": 346,
+        "opis": "Bezprawne otwarcie celi w celu uwolnienia osadzonego",
+        "minuty": 25
+    },
+    {
+        "numer": 347,
+        "opis": "Celowe wyłączenie monitoringu w celu umożliwienia ucieczki",
+        "minuty": 25
+    },
+    {
+        "numer": 348,
+        "opis": "Celowe wyłączenie alarmu obwodowego więzienia",
+        "minuty": 25
+    },
+    {
+        "numer": 349,
+        "opis": "Wykonanie tunelu służącego ucieczce z więzienia",
+        "minuty": 25
+    },
+    {
+        "numer": 350,
+        "opis": "Wzięcie funkcjonariusza SW jako zakładnika",
+        "minuty": 30
+    },
+    {
+        "numer": 351,
+        "opis": "Wzięcie współosadzonego jako zakładnika",
+        "minuty": 30
+    },
+    {
+        "numer": 352,
+        "opis": "Zmuszenie funkcjonariusza groźbą do otwarcia bramy",
+        "minuty": 25
+    },
+    {
+        "numer": 353,
+        "opis": "Organizowanie ataku na personel więzienny",
+        "minuty": 25
+    },
+    {
+        "numer": 354,
+        "opis": "Ukrywanie broni w celi",
+        "minuty": 20
+    },
+    {
+        "numer": 355,
+        "opis": "Wytworzenie broni na terenie zakładu karnego",
+        "minuty": 25
+    },
+    {
+        "numer": 356,
+        "opis": "Celowe wywołanie pożaru celi z zagrożeniem dla ludzi",
+        "minuty": 25
+    },
+    {
+        "numer": 357,
+        "opis": "Zatrucie napoju współosadzonego",
+        "minuty": 25
+    },
+    {
+        "numer": 358,
+        "opis": "Wymuszenie przekazania depozytu współosadzonego",
+        "minuty": 25
+    },
+    {
+        "numer": 359,
+        "opis": "Zniszczenie dokumentacji wyroku w celu bezprawnego zwolnienia",
+        "minuty": 25
+    },
+    {
+        "numer": 360,
+        "opis": "Udzielenie schronienia zbiegłemu osadzonemu ze świadomością ucieczki",
+        "minuty": 25
+    },
+    {
+        "numer": 361,
+        "opis": "Bezprawne usunięcie organu podczas zabiegu",
+        "minuty": 25
+    },
+    {
+        "numer": 362,
+        "opis": "Handel organami ludzkimi",
+        "minuty": 30
+    },
+    {
+        "numer": 363,
+        "opis": "Zmuszanie pacjenta groźbą do podpisania zgody na zabieg",
+        "minuty": 25
+    },
+    {
+        "numer": 364,
+        "opis": "Fałszowanie wyników badań w celu wyrządzenia szkody",
+        "minuty": 25
+    },
+    {
+        "numer": 365,
+        "opis": "Celowa zamiana próbek medycznych w celu oszustwa",
+        "minuty": 25
+    },
+    {
+        "numer": 366,
+        "opis": "Umyślne uszkodzenie butli tlenowej używanej przy pacjencie",
+        "minuty": 30
+    },
+    {
+        "numer": 367,
+        "opis": "Kradzież defibrylatora z miejsca prowadzenia resuscytacji",
+        "minuty": 25
+    },
+    {
+        "numer": 368,
+        "opis": "Napaść na ratownika podczas udzielania pomocy",
+        "minuty": 25
+    },
+    {
+        "numer": 369,
+        "opis": "Zatrzymanie ambulansu przemocą podczas przewozu pacjenta",
+        "minuty": 25
+    },
+    {
+        "numer": 370,
+        "opis": "Bezprawne ujawnienie lokalizacji pacjenta osobie planującej atak",
+        "minuty": 25
+    },
+    {
+        "numer": 371,
+        "opis": "Celowe zakażenie innej osoby niebezpiecznym patogenem",
+        "minuty": 30
+    },
+    {
+        "numer": 372,
+        "opis": "Kradzież próbek niebezpiecznych patogenów z laboratorium",
+        "minuty": 25
+    },
+    {
+        "numer": 373,
+        "opis": "Uwolnienie niebezpiecznych patogenów z laboratorium",
+        "minuty": 30
+    },
+    {
+        "numer": 374,
+        "opis": "Sprzedaż skażonego sprzętu medycznego jako sterylnego",
+        "minuty": 25
+    },
+    {
+        "numer": 375,
+        "opis": "Świadome dopuszczenie niesprawnej aparatury do zabiegu",
+        "minuty": 25
+    },
+    {
+        "numer": 376,
+        "opis": "Bezprawne uwięzienie pacjenta w placówce",
+        "minuty": 25
+    },
+    {
+        "numer": 377,
+        "opis": "Wymuszenie pieniędzy groźbą ujawnienia diagnozy",
+        "minuty": 25
+    },
+    {
+        "numer": 378,
+        "opis": "Przemoc wobec pacjenta pozostającego pod opieką",
+        "minuty": 25
+    },
+    {
+        "numer": 379,
+        "opis": "Celowe podanie niewłaściwej grupy krwi",
+        "minuty": 25
+    },
+    {
+        "numer": 380,
+        "opis": "Ukrycie błędu medycznego przez zniszczenie dokumentacji",
+        "minuty": 25
+    },
+    {
+        "numer": 381,
+        "opis": "Organizowanie porwania dla okupu",
+        "minuty": 30
+    },
+    {
+        "numer": 382,
+        "opis": "Przetrzymywanie zakładnika w celu wymuszenia decyzji władz",
+        "minuty": 30
+    },
+    {
+        "numer": 383,
+        "opis": "Dostarczenie pojazdu ze świadomością jego użycia do porwania",
+        "minuty": 25
+    },
+    {
+        "numer": 384,
+        "opis": "Udostępnienie lokalu ze świadomością przetrzymywania zakładnika",
+        "minuty": 25
+    },
+    {
+        "numer": 385,
+        "opis": "Zmuszanie osoby do przekazania kodu bankowego przemocą",
+        "minuty": 25
+    },
+    {
+        "numer": 386,
+        "opis": "Zmuszanie osoby do podpisania umowy groźbą użycia broni",
+        "minuty": 25
+    },
+    {
+        "numer": 387,
+        "opis": "Wymuszenie przeniesienia własności firmy",
+        "minuty": 25
+    },
+    {
+        "numer": 388,
+        "opis": "Zajęcie siedziby firmy przemocą",
+        "minuty": 25
+    },
+    {
+        "numer": 389,
+        "opis": "Zastraszanie pracowników w celu przejęcia przedsiębiorstwa",
+        "minuty": 25
+    },
+    {
+        "numer": 390,
+        "opis": "Zorganizowanie napadu na kantor",
+        "minuty": 25
+    },
+    {
+        "numer": 391,
+        "opis": "Zorganizowanie napadu na transport gotówki",
+        "minuty": 30
+    },
+    {
+        "numer": 392,
+        "opis": "Napad na konwój z osobą chronioną",
+        "minuty": 30
+    },
+    {
+        "numer": 393,
+        "opis": "Napaść na ochroniarza w celu przejęcia jego broni",
+        "minuty": 25
+    },
+    {
+        "numer": 394,
+        "opis": "Celowe rozbrojenie funkcjonariusza podczas interwencji",
+        "minuty": 25
+    },
+    {
+        "numer": 395,
+        "opis": "Użycie pojazdu do staranowania blokady z zagrożeniem ludzi",
+        "minuty": 25
+    },
+    {
+        "numer": 396,
+        "opis": "Kierowanie pojazdu w tłum z zamiarem wyrządzenia krzywdy",
+        "minuty": 30
+    },
+    {
+        "numer": 397,
+        "opis": "Zrzucenie ciężkiego przedmiotu z wiaduktu na drogę",
+        "minuty": 25
+    },
+    {
+        "numer": 398,
+        "opis": "Zastawienie pułapki powodującej zagrożenie dla ludzi",
+        "minuty": 25
+    },
+    {
+        "numer": 399,
+        "opis": "Zorganizowanie zbrojnego ataku na siedzibę służby",
+        "minuty": 30
+    },
+    {
+        "numer": 400,
+        "opis": "Finansowanie zbrojnego ataku na obiekt publiczny",
+        "minuty": 30
     }
 ];
 
@@ -1492,3 +2692,4 @@ client.on("interactionCreate", async interaction => {
 });
 
 client.login(TOKEN);
+
