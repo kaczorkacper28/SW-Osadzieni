@@ -2371,7 +2371,7 @@ const commands = [
     new SlashCommandBuilder().setName("przepustki").setDescription("Pokazuje oczekujące przepustki")
 ].map(c => c.toJSON());
 
-client.once("ready", async () => {
+client.once("clientReady", async () => {
     console.log(`✅ Zalogowano jako ${client.user.tag}`);
     const rest = new REST({ version: "10" }).setToken(TOKEN);
     try {
