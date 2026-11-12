@@ -2,6 +2,7 @@ const {
     Client,
     GatewayIntentBits,
     PermissionFlagsBits,
+    MessageFlags,
     EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
@@ -2410,7 +2411,7 @@ client.on("interactionCreate", async interaction => {
     // DODAJ OSADZONEGO
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "osadzony-dodaj") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień do dodawania osadzonych.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień do dodawania osadzonych.", flags: MessageFlags.Ephemeral });
 
         const imie = interaction.options.getString("imie");
         const paragraf = interaction.options.getString("paragraf");
@@ -2419,11 +2420,11 @@ client.on("interactionCreate", async interaction => {
         const koniec = interaction.options.getString("koniec");
         const cela = interaction.options.getString("cela");
 
-        if (!parseTime(poczatek)) return interaction.reply({ content: "❌ Nieprawidłowy początek kary. Użyj `HH:MM`.", ephemeral: true });
-        if (!parseTime(koniec)) return interaction.reply({ content: "❌ Nieprawidłowy koniec kary. Użyj `HH:MM`.", ephemeral: true });
+        if (!parseTime(poczatek)) return interaction.reply({ content: "❌ Nieprawidłowy początek kary. Użyj `HH:MM`.", flags: MessageFlags.Ephemeral });
+        if (!parseTime(koniec)) return interaction.reply({ content: "❌ Nieprawidłowy koniec kary. Użyj `HH:MM`.", flags: MessageFlags.Ephemeral });
 
         const duration = calculateDurationBetween(poczatek, koniec);
-        if (duration === null || duration <= 0) return interaction.reply({ content: "❌ Koniec kary musi być późniejszy od początku albo kara musi przechodzić przez północ.", ephemeral: true });
+        if (duration === null || duration <= 0) return interaction.reply({ content: "❌ Koniec kary musi być późniejszy od początku albo kara musi przechodzić przez północ.", flags: MessageFlags.Ephemeral });
 
         const id = createOsadzonyId();
         const osadzony = {
@@ -2459,18 +2460,18 @@ client.on("interactionCreate", async interaction => {
     // INFO
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "osadzony-info") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz dostępu do rejestru.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz dostępu do rejestru.", flags: MessageFlags.Ephemeral });
         const osadzony = getOsadzony(interaction.options.getString("id"));
-        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", ephemeral: true });
-        return interaction.reply({ embeds: [buildOsadzonyEmbed(osadzony)], components: [buildTimerButtons(osadzony)], ephemeral: true });
+        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", flags: MessageFlags.Ephemeral });
+        return interaction.reply({ embeds: [buildOsadzonyEmbed(osadzony)], components: [buildTimerButtons(osadzony)], flags: MessageFlags.Ephemeral });
     }
 
     // ==================================================
     // LISTA
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "osadzeni") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz dostępu do rejestru.", ephemeral: true });
-        if (!db.osadzeni.length) return interaction.reply({ content: "📭 Aktualnie brak osadzonych.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz dostępu do rejestru.", flags: MessageFlags.Ephemeral });
+        if (!db.osadzeni.length) return interaction.reply({ content: "📭 Aktualnie brak osadzonych.", flags: MessageFlags.Ephemeral });
         let lista = db.osadzeni.map(o => {
             const seconds = getRemainingSeconds(o, true);
             return `**${o.id}** • ${o.imie}\n⚖️ ${o.paragraf} • 🔒 Cela ${o.cela}\n${o.paused ? "⏸️" : "⏳"} ${Math.ceil(seconds / 60)} min.`;
@@ -2482,9 +2483,9 @@ client.on("interactionCreate", async interaction => {
     // USUŃ
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "osadzony-usun") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", flags: MessageFlags.Ephemeral });
         const index = db.osadzeni.findIndex(o => o.id.toLowerCase() === interaction.options.getString("id").toLowerCase());
-        if (index === -1) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", ephemeral: true });
+        if (index === -1) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", flags: MessageFlags.Ephemeral });
         const removed = db.osadzeni.splice(index, 1)[0];
         saveDatabase();
         await interaction.reply({ content: `✅ Usunięto **${removed.imie} (${removed.id})** z rejestru.` });
@@ -2496,9 +2497,9 @@ client.on("interactionCreate", async interaction => {
     // EDYTUJ
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "osadzony-edytuj") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", flags: MessageFlags.Ephemeral });
         const osadzony = getOsadzony(interaction.options.getString("id"));
-        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", ephemeral: true });
+        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", flags: MessageFlags.Ephemeral });
         const cela = interaction.options.getString("cela");
         const paragraf = interaction.options.getString("paragraf");
         const wyrok = interaction.options.getString("wyrok");
@@ -2509,11 +2510,11 @@ client.on("interactionCreate", async interaction => {
         if (paragraf) osadzony.paragraf = paragraf;
         if (wyrok) { osadzony.wyrok = wyrok; osadzony.czasZWyrokuMinuty = calculateSentenceMinutes(wyrok); }
         if (uwagi) osadzony.uwagi = uwagi;
-        if (poczatek) { if (!parseTime(poczatek)) return interaction.reply({ content: "❌ Początek musi być `HH:MM`.", ephemeral: true }); osadzony.poczatek = poczatek; }
-        if (koniec) { if (!parseTime(koniec)) return interaction.reply({ content: "❌ Koniec musi być `HH:MM`.", ephemeral: true }); osadzony.koniec = koniec; }
+        if (poczatek) { if (!parseTime(poczatek)) return interaction.reply({ content: "❌ Początek musi być `HH:MM`.", flags: MessageFlags.Ephemeral }); osadzony.poczatek = poczatek; }
+        if (koniec) { if (!parseTime(koniec)) return interaction.reply({ content: "❌ Koniec musi być `HH:MM`.", flags: MessageFlags.Ephemeral }); osadzony.koniec = koniec; }
         if (poczatek || koniec) {
             const duration = calculateDurationBetween(osadzony.poczatek, osadzony.koniec);
-            if (duration === null || duration <= 0) return interaction.reply({ content: "❌ Nieprawidłowy zakres czasu.", ephemeral: true });
+            if (duration === null || duration <= 0) return interaction.reply({ content: "❌ Nieprawidłowy zakres czasu.", flags: MessageFlags.Ephemeral });
             getRemainingSeconds(osadzony, true);
         }
         saveDatabase();
@@ -2526,15 +2527,15 @@ client.on("interactionCreate", async interaction => {
     // PRZEPUSTKA
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "przepustka") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", flags: MessageFlags.Ephemeral });
         const id = interaction.options.getString("id");
         const od = interaction.options.getString("od");
         const doDate = interaction.options.getString("do");
         const powod = interaction.options.getString("powod");
         const miejsce = interaction.options.getString("miejsce");
         const osadzony = getOsadzony(id);
-        if (!osadzony) return interaction.reply({ content: `❌ Nie znaleziono osadzonego **${id}**.`, ephemeral: true });
-        if (!parseTime(od) || !parseTime(doDate)) return interaction.reply({ content: "❌ Godziny przepustki muszą być w formacie `HH:MM`.", ephemeral: true });
+        if (!osadzony) return interaction.reply({ content: `❌ Nie znaleziono osadzonego **${id}**.`, flags: MessageFlags.Ephemeral });
+        if (!parseTime(od) || !parseTime(doDate)) return interaction.reply({ content: "❌ Godziny przepustki muszą być w formacie `HH:MM`.", flags: MessageFlags.Ephemeral });
         const przepustkaId = `P-${String(db.przepustki.length + 1).padStart(3, "0")}`;
         const przepustka = { id: przepustkaId, osadzonyId: osadzony.id, osadzony: osadzony.imie, od, do: doDate, powod, miejsce, status: "oczekuje", zlozyl: interaction.user.id, utworzono: new Date().toISOString() };
         db.przepustki.push(przepustka); saveDatabase();
@@ -2554,7 +2555,7 @@ client.on("interactionCreate", async interaction => {
         );
         const channel = interaction.guild.channels.cache.find(ch => ch.name === CHANNEL_PRZEPUSTKI && ch.isTextBased());
         if (channel) await channel.send({ embeds: [embed], components: [buttons] });
-        await interaction.reply({ content: `✅ Wniosek **${przepustkaId}** został złożony.`, ephemeral: true });
+        await interaction.reply({ content: `✅ Wniosek **${przepustkaId}** został złożony.`, flags: MessageFlags.Ephemeral });
         await sendLog(interaction.guild, new EmbedBuilder().setTitle("🎫 NOWY WNIOSEK O PRZEPUSTKĘ").setDescription(`${interaction.user} złożył wniosek dla **${osadzony.imie} (${osadzony.id})**.`).addFields({ name: "ID wniosku", value: przepustkaId }).setTimestamp());
         return;
     }
@@ -2563,11 +2564,11 @@ client.on("interactionCreate", async interaction => {
     // PRZEPUSTKI
     // ==================================================
     if (interaction.isChatInputCommand() && interaction.commandName === "przepustki") {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Nie masz uprawnień.", flags: MessageFlags.Ephemeral });
         const oczekujace = db.przepustki.filter(p => p.status === "oczekuje");
-        if (!oczekujace.length) return interaction.reply({ content: "📭 Brak oczekujących wniosków o przepustkę.", ephemeral: true });
+        if (!oczekujace.length) return interaction.reply({ content: "📭 Brak oczekujących wniosków o przepustkę.", flags: MessageFlags.Ephemeral });
         const lista = oczekujace.map(p => `**${p.id}** • ${p.osadzony} (${p.osadzonyId})\n🕐 ${p.od} → ${p.do}\n📍 ${p.miejsce}\n📝 ${p.powod}`).join("\n\n");
-        return interaction.reply({ embeds: [new EmbedBuilder().setTitle("🎫 OCZEKUJĄCE PRZEPUSTKI").setDescription(lista).setTimestamp()], ephemeral: true });
+        return interaction.reply({ embeds: [new EmbedBuilder().setTitle("🎫 OCZEKUJĄCE PRZEPUSTKI").setDescription(lista).setTimestamp()], flags: MessageFlags.Ephemeral });
     }
 
     // ==================================================
@@ -2575,15 +2576,15 @@ client.on("interactionCreate", async interaction => {
     // ==================================================
     if (interaction.isButton() && interaction.customId.startsWith("kara_")) {
         if (!hasTimerPermission(interaction)) {
-            return interaction.reply({ content: `❌ Tę funkcję może obsługiwać wyłącznie rola **${TIMER_ROLE_NAME}**.`, ephemeral: true });
+            return interaction.reply({ content: `❌ Tę funkcję może obsługiwać wyłącznie rola **${TIMER_ROLE_NAME}**.`, flags: MessageFlags.Ephemeral });
         }
         const [, action, id] = interaction.customId.split("_");
         const osadzony = getOsadzony(id);
-        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", ephemeral: true });
+        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", flags: MessageFlags.Ephemeral });
         const seconds = getRemainingSeconds(osadzony, true);
 
         if (action === "pause") {
-            if (osadzony.paused || seconds <= 0) return interaction.reply({ content: "❌ Kara jest już wstrzymana albo zakończona.", ephemeral: true });
+            if (osadzony.paused || seconds <= 0) return interaction.reply({ content: "❌ Kara jest już wstrzymana albo zakończona.", flags: MessageFlags.Ephemeral });
             osadzony.paused = true;
             osadzony.timerStartedAt = null;
             saveDatabase();
@@ -2593,7 +2594,7 @@ client.on("interactionCreate", async interaction => {
         }
 
         if (action === "resume") {
-            if (!osadzony.paused || seconds <= 0) return interaction.reply({ content: "❌ Kara jest już aktywna albo zakończona.", ephemeral: true });
+            if (!osadzony.paused || seconds <= 0) return interaction.reply({ content: "❌ Kara jest już aktywna albo zakończona.", flags: MessageFlags.Ephemeral });
             osadzony.paused = false;
             osadzony.timerStartedAt = new Date().toISOString();
             saveDatabase();
@@ -2623,12 +2624,12 @@ client.on("interactionCreate", async interaction => {
     // MODAL ZMIANY CZASU
     // ==================================================
     if (interaction.isModalSubmit() && interaction.customId.startsWith("kara_modal_")) {
-        if (!hasTimerPermission(interaction)) return interaction.reply({ content: `❌ Tę funkcję może obsługiwać wyłącznie rola **${TIMER_ROLE_NAME}**.`, ephemeral: true });
+        if (!hasTimerPermission(interaction)) return interaction.reply({ content: `❌ Tę funkcję może obsługiwać wyłącznie rola **${TIMER_ROLE_NAME}**.`, flags: MessageFlags.Ephemeral });
         const [, , action, id] = interaction.customId.split("_");
         const osadzony = getOsadzony(id);
-        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", ephemeral: true });
+        if (!osadzony) return interaction.reply({ content: "❌ Nie znaleziono osadzonego.", flags: MessageFlags.Ephemeral });
         const amount = Number.parseInt(interaction.fields.getTextInputValue("minutes"), 10);
-        if (!Number.isInteger(amount) || amount <= 0 || amount > 100000) return interaction.reply({ content: "❌ Podaj liczbę minut od 1 do 100000.", ephemeral: true });
+        if (!Number.isInteger(amount) || amount <= 0 || amount > 100000) return interaction.reply({ content: "❌ Podaj liczbę minut od 1 do 100000.", flags: MessageFlags.Ephemeral });
 
         let seconds = getRemainingSeconds(osadzony, true);
         const delta = amount * 60;
@@ -2644,7 +2645,7 @@ client.on("interactionCreate", async interaction => {
         saveDatabase();
 
         const actionText = action === "add" ? `dodano **${amount} min.**` : `odjęto **${amount} min.**`;
-        await interaction.reply({ content: `✅ ${actionText} dla **${osadzony.imie} (${osadzony.id})**.`, ephemeral: true });
+        await interaction.reply({ content: `✅ ${actionText} dla **${osadzony.imie} (${osadzony.id})**.`, flags: MessageFlags.Ephemeral });
         await refreshOsadzonyMessage(osadzony);
         await sendLog(interaction.guild, new EmbedBuilder().setTitle(action === "add" ? "➕ ZMIENIONO CZAS KARY" : "➖ ZMIENIONO CZAS KARY").setDescription(`${interaction.user} ${actionText} dla **${osadzony.imie} (${osadzony.id})**.`).setTimestamp());
         return;
@@ -2654,11 +2655,11 @@ client.on("interactionCreate", async interaction => {
     // PRZYCISKI PRZEPUSTEK
     // ==================================================
     if (interaction.isButton() && interaction.customId.startsWith("przepustka_")) {
-        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Tylko uprawnione osoby mogą rozpatrywać przepustki.", ephemeral: true });
+        if (!hasPermission(interaction)) return interaction.reply({ content: "❌ Tylko uprawnione osoby mogą rozpatrywać przepustki.", flags: MessageFlags.Ephemeral });
         const [, action, id] = interaction.customId.split("_");
         const przepustka = db.przepustki.find(p => p.id === id);
-        if (!przepustka) return interaction.reply({ content: "❌ Nie znaleziono tego wniosku.", ephemeral: true });
-        if (przepustka.status !== "oczekuje") return interaction.reply({ content: "❌ Ten wniosek został już rozpatrzony.", ephemeral: true });
+        if (!przepustka) return interaction.reply({ content: "❌ Nie znaleziono tego wniosku.", flags: MessageFlags.Ephemeral });
+        if (przepustka.status !== "oczekuje") return interaction.reply({ content: "❌ Ten wniosek został już rozpatrzony.", flags: MessageFlags.Ephemeral });
         const osadzony = getOsadzony(przepustka.osadzonyId);
 
         if (action === "zgoda") {
